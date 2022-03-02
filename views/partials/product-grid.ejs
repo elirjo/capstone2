@@ -1,0 +1,199 @@
+<!-- shop area start -->
+<section class="shop__area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="shop__content-area">
+                <div class="header__search-inner text-center">
+                    <form class="header_search-form" action="/search">
+                        <div class="header__search-input p-relative">
+                            <input name="term" type="text" placeholder="Search for products... ">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="shop__header d-sm-flex justify-content-between align-items-center mb-40">
+                    <div class="shop__header-left">
+                        <div class="show-text">
+                            <span>Results</span>
+                        </div>
+                    </div>
+                    <div class="shop__header-right d-flex align-items-center justify-content-between justify-content-sm-end">
+                        <div class="sort-wrapper mr-30 pr-25 p-relative">
+                            <select>
+                                                    <option value="1">Default Sorting</option>
+                                                    <option value="2">Type 1</option>
+                                                    <option value="3">Type 2</option>
+                                                    <option value="4">Type 3</option>
+                                                    <option value="5">Type 4</option>
+                                                </select>
+                        </div>
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-grid-tab" data-toggle="pill" href="#pills-grid" role="tab" aria-controls="pills-grid" aria-selected="true"><i class="fas fa-th"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-list-tab" data-toggle="pill" href="#pills-list" role="tab" aria-controls="pills-list" aria-selected="false"><i class="fas fa-list-ul"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+                        <!-- <div id="batabestProducts" class="row custom-row-10">
+                        </div> -->
+                        <div class = "row custom-row-10">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-10">
+                                <div class="product__wrapper mb-60">
+                                    <div class="product__action transition-3">
+                                        <a class="product__modal" href="#" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                            <i data-asin="${product.asin}" data-toggle="" class="fal fa-search"></i>
+                                        </a>
+                                        <a class="addtocart" data-asin="${product.asin}" href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart">
+                                            <i data-asin="${product.asin}" class="fal fa-shopping-cart"></i>
+                                        </a>
+                                        <a data-asin="${product.asin}" class="addtowishlist" href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                            <i data-asin="${product.asin}" class="fal fa-heart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product__sale">
+                                        <div class="product_price">
+                                            $18
+                                        </div>
+                                        <div class="triangle-right"></div>
+                                    </div>
+                                    <div class="product__thumb">
+                                        <a class="w-img" href="#"  class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                          <img  href = "#" class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId" src="https://m.media-amazon.com/images/I/610lKvMwFNL._AC_SX679_.jpg" alt="product-img">
+                                        </a>
+                                    </div>
+                                    <div class="product__content p-relative">
+                                        <div class="product__content-inner">
+                                            <h4>
+                                                <a target="_blank" href="${product.link}">
+                                                    AmazonBasics Gaming Chat Headset for PlayStation 4 with Microphone - 4 Foot Cable, Blue
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-10">
+                                <div class="product__wrapper mb-60">
+                                    <div class="product__action transition-3">
+                                        <a class="product__modal" href="#" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                            <i data-asin="${product.asin}" data-toggle="" class="fal fa-search"></i>
+                                        </a>
+                                        <a class="addtocart" data-asin="${product.asin}" href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart">
+                                            <i data-asin="${product.asin}" class="fal fa-shopping-cart"></i>
+                                        </a>
+                                        <a data-asin="${product.asin}" class="addtowishlist" href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                            <i data-asin="${product.asin}" class="fal fa-heart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product__sale">
+                                        <div class="product_price">
+                                            $55.98
+                                        </div>
+                                        <div class="triangle-right"></div>
+                                    </div>
+                                    <div class="product__thumb">
+                                        <a class="w-img" href="#"  class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                          <img  href = "#" class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId" src="https://m.media-amazon.com/images/I/811tgMXfuxL._AC_SX679_.jpg" alt="product-img">
+                                        </a>
+                                    </div>
+                                    <div class="product__content p-relative">
+                                        <div class="product__content-inner">
+                                            <h4>
+                                                <a target="_blank" href="${product.link}">
+                                                    SteelSeries Arctis 1 Wired Gaming Headset – Detachable Clearcast Microphone – Lightweight Steel-Reinforced Headband – for PC, PS5/PS4, Xbox Series X[S]One, Nintendo Switch and Lite, Mobile
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-10">
+                                <div class="product__wrapper mb-60">
+                                    <div class="product__action transition-3">
+                                        <a class="product__modal" href="#" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                            <i data-asin="${product.asin}" data-toggle="" class="fal fa-search"></i>
+                                        </a>
+                                        <a class="addtocart" data-asin="${product.asin}" href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart">
+                                            <i data-asin="${product.asin}" class="fal fa-shopping-cart"></i>
+                                        </a>
+                                        <a data-asin="${product.asin}" class="addtowishlist" href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                            <i data-asin="${product.asin}" class="fal fa-heart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product__sale">
+                                        <div class="product_price">
+                                            $149.99
+                                        </div>
+                                        <div class="triangle-right"></div>
+                                    </div>
+                                    <div class="product__thumb">
+                                        <a class="w-img" href="#"  class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                          <img  href = "#" class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId" src="https://m.media-amazon.com/images/I/71pDEXEU5QS._AC_SX425_.jpg" alt="product-img">
+                                        </a>
+                                    </div>
+                                    <div class="product__content p-relative">
+                                        <div class="product__content-inner">
+                                            <h4>
+                                                <a target="_blank" href="${product.link}">
+                                                    Microsoft Modern Wireless Headset - Black, 8JR-00001, Teams Certified
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-10">
+                                <div class="product__wrapper mb-60">
+                                    <div class="product__action transition-3">
+                                        <a class="product__modal" href="#" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                            <i data-asin="${product.asin}" data-toggle="" class="fal fa-search"></i>
+                                        </a>
+                                        <a class="addtocart" data-asin="${product.asin}" href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart">
+                                            <i data-asin="${product.asin}" class="fal fa-shopping-cart"></i>
+                                        </a>
+                                        <a data-asin="${product.asin}" class="addtowishlist" href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                            <i data-asin="${product.asin}" class="fal fa-heart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product__sale">
+                                        <div class="product_price">
+                                            $38.99
+                                        </div>
+                                        <div class="triangle-right"></div>
+                                    </div>
+                                    <div class="product__thumb">
+                                        <a class="w-img" href="#"  class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId">
+                                          <img  href = "#" class="product__modal" data-asin="${product.asin}" data-toggle="modal" data-target="#productModalId" src="https://m.media-amazon.com/images/I/61SAI3dj0mL._AC_SX425_.jpg" alt="product-img">
+                                        </a>
+                                    </div>
+                                    <div class="product__content p-relative">
+                                        <div class="product__content-inner">
+                                            <h4>
+                                                <a target="_blank" href="${product.link}">
+                                                    Wireless Earbuds,Bluetooth Headphones Touch Control with Portable Charging Case,ENC Noise Cancellation Earphones,in-Ear Built-in Mic Stereo Headsets Premium Sound for Work/Home Office,AEA9 Lite
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="col-xl-12">
+                        <div class="shop-pagination-wrapper text-center">
+                            <button id="batabestLoadMore" class="os-btn os-btn-2">Load More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- shop area end -->

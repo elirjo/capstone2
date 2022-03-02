@@ -1,0 +1,193 @@
+/*----------------------------------------*/
+/*  04. BANNER CSS START
+/*----------------------------------------*/
+
+.banner{
+    &__area{}
+    &__inner{
+        &::before{
+            position: absolute;
+            content: '';
+            top: -20px;
+            left: -20px;
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            background: $white;
+            @media #{$laptop}{
+                width: calc(100% + 30px);
+                height: calc(100% + 30px);
+                top: -15px;
+                left: -15px;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+        }
+        @media #{$md}{
+            margin-top: 30px;
+        }
+        @media #{$sm}{
+            margin-top: 30px;
+        }
+        @media #{$xs}{
+            margin-top: 30px;
+        }
+    }
+    &__thumb{
+        & a{
+            display: block;
+        }
+    }
+    &__item{
+        &:hover{
+            & .banner__thumb{
+                & img{
+                    @include transform(scale(1.1));
+                }
+            }
+            & .banner__content{
+                top: 60%;
+            }
+        }
+        &-2{
+            padding-left: 0;
+            padding-right: 0;
+            
+            &:hover{
+                & .banner__thumb{
+                    & img{
+                        @include transform(scale(1.1));
+                    }
+                }
+            }
+        }
+    }
+    &__content{
+        top: 50%;
+        left: 10%;
+        @include transform(translateY(-50%));
+        & span{
+            color: $theme-color;
+            margin-bottom: 15px;
+        }
+        & h5{
+            margin-bottom: 17px;
+            line-height: 22px;
+            & a{
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        &-2{
+            top: 50%;
+            left: 85px;
+            @include transform(translateY(-50%));
+            @media #{$lg}{
+                left: 40px;
+            }
+            @media #{$md}{
+                left: 40px;
+            }
+            @media #{$sm}{
+                left: 40px;
+            }
+            @media #{$xs}{
+                left: 15px;
+            }
+            &.banner__content-2-right{
+                left: 100px;
+                @media #{$lg}{
+                    left: 55px;
+                }
+                @media #{$md}{
+                    left: 40px;
+                }
+                @media #{$sm}{
+                    left: 40px;
+                }
+                @media #{$xs}{
+                    left: 15px;
+                }
+            }
+            & span{
+                color: $theme-color
+            }
+            & h4{
+                font-size: 18px;
+                margin-bottom: 10px;
+                margin-bottom: 15px;
+                @media #{$laptop}{
+                    margin-bottom: 25px;
+                }
+                @media #{$sm}{
+                    margin-bottom: 25px;
+                }
+                @media #{$xs}{
+                    margin-bottom: 25px;
+                }
+                & a{
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+            & p{
+                color: $black-soft;
+                margin-bottom: 37px;
+                @media #{$laptop}{
+                    display: none;
+                }
+                @media #{$lg}{
+                    display: none;
+                }
+                @media #{$md}{
+                    display: none;
+                }
+                @media #{$sm}{
+                    display: none;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+        }
+        &-4{
+            left: 25px;
+            &.banner__content-4-right{
+                left: 45px;
+                @media #{$xs}{
+                    left: 25px;
+                }
+            }
+        }
+    }
+}
+
+.banner-right{
+    padding-right: 15px;
+    @media #{$md}{
+        padding-right: 0;
+    }
+    @media #{$sm}{
+        padding-right: 0;
+    }
+    @media #{$xs}{
+        padding-right: 0;
+    }
+}
+.banner-left{
+    padding-left: 15px;
+    @media #{$md}{
+        padding-left: 0;
+    }
+    @media #{$sm}{
+        padding-left: 0;
+    }
+    @media #{$xs}{
+        padding-left: 0;
+    }
+}
