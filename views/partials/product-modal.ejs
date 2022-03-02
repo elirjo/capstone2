@@ -1,0 +1,71 @@
+<!-- shop modal start -->
+<!-- Modal -->
+<div class="modal fade" id="productModalId" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered product-modal" role="document">
+        <div class="modal-content">
+            <div class="product__modal-wrapper p-relative">
+                <div class="product__modal-close p-absolute">
+                    <button data-dismiss="modal"><i class="fal fa-times"></i></button>
+                </div>
+                <div class="product__modal-inner">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="product__modal-box">
+                                <div class="tab-content mb-20" id="nav-tabContent">
+                                    <div class="product__modal-img w-img">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="container py-1">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-3 col-lg-3 col-sm-3">
+                                        <!-- Score Progress bar -->
+                                        <div  id = "score_reflection" class="progress progress_circle mx-auto float-left" data-value='0.0'>
+                                        <span class="progress-left progress-left-circle">
+                                                        <span class="progress-bar progress-bar-circle border-success"></span>
+                                        </span>
+                                        <span class="progress-right progress-right-circle">
+                                                        <span class="progress-bar progress-bar-circle border-success"></span>
+                                        </span>
+                                        <div class="progress-value progress-value-circle w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                            <div id = "score"  class="h2 font-weight-bold">0.0<sup class="small"></sup></div>
+                                        </div>
+                                        </div>
+                                        <!-- END score progress bar -->
+                                    </div>
+                                    <div class = "col-xl-9 col-lg-9 col-sm-9 product_name_div float-right">
+                                        <h4>
+                                            <a id = "product_name" class = "product_name" href="#"></a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id = "reviews_section" class= "reviews-div">                
+                            </div>
+
+                            <div class="product__modal-content mt-9">
+                                <div class="product__modal-form">
+                                    <div class="pro-quan-area d-lg-flex align-items-center">
+                                        <div class="pro-cart-btn mr-2">
+                                            <a href="#" class="add-cart-btn modal-btn"></a>
+                                        </div>
+                                        <div class="pro-cart-btn mr-2">
+                                            <a href="#" class=" os-btn addtocart modal-btn">Add To Cart</a>
+                                        </div>
+                                        <div class="product__modal-price black"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- shop modal end -->

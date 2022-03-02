@@ -1,0 +1,34 @@
+.reviews-div
+{
+    height: 380px; 
+    overflow: scroll;
+    margin-top: 10px; 
+}
+
+.product_name{
+    font-size: 18px !important;
+}
+
+.product__modal-price{
+    color:black;
+}
+
+.product__modal-content{
+    margin-top: 28px;
+}
+
+
+@media (max-width: 768px) {
+    .product_name_div{
+        margin-left: 5px;
+    }
+
+    .modal-btn{
+        width:100% !important;
+        margin-bottom: 5px !important;
+    }
+
+    .product__modal-price{
+        text-align: center;
+    }
+}
