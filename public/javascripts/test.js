@@ -1,48 +1,3 @@
-let cartItems = JSON.parse(localStorage.getItem('batabestCart')) || [];
-let wishList = JSON.parse(localStorage.getItem('batabestWishList')) || [];
-var review_api_url = "http://localhost:3000/getsummary/"
-
-$('#batabestCart span').text(`(${cartItems.length})`);
-
-$('#batabestWishList span').text(`(${wishList.length})`);
-
-
-async function get_reviews(product_id) {
-    var reviews
-    url = review_api_url + product_id
-    await axios.get(url)
-        .then(response => {
-            reviews = response
-        }).catch(error => {
-            console.log(error)
-        })
-    return reviews
-}
-
-function fill_score(){
-    $(".progress").each(function() {
-
-        var value = $(this).attr('data-value');
-        var left = $(this).find('.progress-left .progress-bar');
-        var right = $(this).find('.progress-right .progress-bar');
-    
-        if (value > 0) {
-            if (value <= 50) {
-            right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
-            } else {
-            right.css('transform', 'rotate(180deg)')
-            left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
-            }
-        }
-    
-        })
-}
-
-function percentageToDegrees(percentage) {
-
-    return percentage / 100 * 360
-
-    }
 
 $('.product__action').on('click', () =>{
 })
@@ -56,7 +11,7 @@ let openProductModal = event => {
 
     event.preventDefault();
     let asin = event.target.dataset.asin;
-    let src = event.target.dataset.src; 
+    // alert(event.target.dataset.src)
 
     (async () => {
         var reviews = await get_reviews(asin)
@@ -113,32 +68,22 @@ let openProductModal = event => {
         }
     })()
 
-    // $('#product_name').text(product.title.substring(0,50));
+
+    let product = products.filter(product => {
+        return product.asin == asin;
+    });
+
+    if (product.length) product = product[0];
+
+    console.log(product);
+
+    $('#product_name').text(product.title.substring(0,50));
     // $('.product__modal-content h4 a').text(product.title.substring(0, 50));
     $('.product__modal-content h4 a').attr('target', '_blank');
-    // $('#modal-img img').attr(src: 'src');
-    document.getElementById('modal-img').src = src
-    // $('.product__modal-form .pro-cart-btn a.add-cart-btn').attr('href', product.link);
+    $('.product__modal-img img').attr('src', product.image['URL']);
+    $('.product__modal-form .pro-cart-btn a.add-cart-btn').attr('href', product.link);
     $('.product__modal-form .pro-cart-btn a.add-cart-btn').attr('target', '_blank');
-    // $('.product__modal-form .pro-cart-btn a.addtocart').attr('data-asin', product.asin);
-    // $('.product__modal-price').text(product.price.raw.split('.')[0]);
+    $('.product__modal-form .pro-cart-btn a.addtocart').attr('data-asin', product.asin);
+    $('.product__modal-price').text(product.price.raw.split('.')[0]);
     $('.product__modal-form .pro-cart-btn a.add-cart-btn').text(`See it on Amazon`);
 }
-
-let bataBestAddEventListeners = () => {
-    $('a.product__modal').each(function (index, element) {
-        $(element).off('click');
-        $(element).on('click', openProductModal)
-    })
-    $('img.product__modal').each(function (index, element) {
-        $(element).on('click', openProductModal)
-    })
-}
-
-$(document).ready(function() {
-    bataBestAddEventListeners();
-})
-
-// reduce size of modal
-// make modal and name to be on the same line 
-// 
