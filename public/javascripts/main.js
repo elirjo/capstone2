@@ -57,7 +57,7 @@ let openProductModal = event => {
     event.preventDefault();
     let asin = event.target.dataset.asin;
     let src = event.target.dataset.src; 
-
+    let link = event.target.dataset.link; 
     (async () => {
         var reviews = await get_reviews(asin)
         console.log(reviews.data.data)
@@ -118,7 +118,7 @@ let openProductModal = event => {
     $('.product__modal-content h4 a').attr('target', '_blank');
     // $('#modal-img img').attr(src: 'src');
     document.getElementById('modal-img').src = src
-    // $('.product__modal-form .pro-cart-btn a.add-cart-btn').attr('href', product.link);
+    $('.product__modal-form .pro-cart-btn a.add-cart-btn').attr('href', link);
     $('.product__modal-form .pro-cart-btn a.add-cart-btn').attr('target', '_blank');
     // $('.product__modal-form .pro-cart-btn a.addtocart').attr('data-asin', product.asin);
     // $('.product__modal-price').text(product.price.raw.split('.')[0]);
