@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Batabest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D8BF686625E44179843396FF3B9E8B93 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D4374E0E7E574B42A990D70E5DB0BA28 }}
